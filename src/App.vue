@@ -1,7 +1,13 @@
-<script setup></script>
+<script setup>
+import Pokes from './components/Pokes.vue';
+</script>
 
 <template>
-  <h1>Git in Vue</h1>
+  <div class="wrapper">
+    <Pokes />
+  </div>
 </template>
 
-<style></style>
+<style>
+@import './assets/globals.css';
+</style>
