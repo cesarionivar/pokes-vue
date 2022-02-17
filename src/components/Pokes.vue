@@ -15,7 +15,8 @@ getPokemons();
     <h2 class="pokes__title">Pokes</h2>
     <div class="pokes__container">
       <div class="poke" v-for="poke in pokes">
-        <p>{{ poke.name }}</p>
+        <img class="poke__img" :src="poke.image" :alt="poke.name" />
+        <p class="poke__name">{{ poke.name }}</p>
       </div>
     </div>
   </div>
@@ -39,5 +40,13 @@ getPokemons();
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
+}
+
+.poke__img {
+  filter: drop-shadow(0 0 0.75rem rgb(82, 78, 79));
+}
+
+.poke__name::first-letter {
+  text-transform: uppercase;
 }
 </style>
